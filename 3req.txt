@@ -1,0 +1,16 @@
+instagrapi	pip install instagrapi	Работа с Instagram API (получение диалогов, сообщений)
+openai-whisper	pip install openai-whisper	Распознавание речи (модель загружается отдельно)
+requests	pip install requests	Скачивание аудиофайлов по URL
+torch	pip install torch	Бэкенд для Whisper (обычно устанавливается автоматически вместе с whisper)
+ffmpeg-python (опционально)	pip install ffmpeg-python	Не требуется, так как мы вызываем ffmpeg через subprocess
+ffmpeg -version
+ffprobe -version
+
+
+ Модель Whisper
+При первом запуске программа автоматически загрузит модель base (вес ~140 МБ). Можно использовать и другие размеры, изменив переменную WHISPER_MODEL:
+tiny (~40 МБ)
+base (~140 МБ) — используется по умолчанию
+small (~460 МБ)
+medium (~1.5 ГБ)
+large (~3 ГБ)
